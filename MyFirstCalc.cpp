@@ -3,12 +3,13 @@
 #include <string>
 using namespace std; 
 
-class Calculator {
+class Calculator { //user-defined class calced Calculator
     private: 
         double a; 
         double b; 
         double c; 
         double d; 
+        double e; 
     public: 
         Calculator(){
             a = 0.0; 
@@ -46,6 +47,12 @@ class Calculator {
         double getDivide(){
             return d; 
         }
+        void setSubtract(double y, double z){
+            e = (z-y); 
+        }
+        double getSubtract(){
+            return e; 
+        }
 }; 
 
 int main(){
@@ -64,11 +71,15 @@ int main(){
     calc.setSqrt(x); 
     calc.setMultiply(x, y, z); 
     calc.setDivide(x, y); 
+    calc.setSubtract(z, y); 
 
     cout << "Power function = " << calc.getPower() << endl;  
     cout << "Squareroot function = " << calc.getSqrt() << endl; 
     cout << "Multiply function = " << calc.getMultiply() << endl; 
     cout << "Divide function = " << calc.getDivide() << endl; 
+    cout << "Subtract Function = " << calc.getSubtract() << endl; 
+
+
 
     return 0; 
 }
